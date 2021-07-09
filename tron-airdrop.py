@@ -5,6 +5,7 @@ from tronpy import keys
 import pymysql
 import json
 import requests
+import time
 
 ### configs
 TRON_ADDRESS = ''
@@ -61,6 +62,7 @@ while True:
 						.build()
 						.sign(priv_key)
 						)
+					time.sleep(1)
 					txn.broadcast()
 					sql = "INSERT INTO address (tron_address) VALUES ('" + response1["data"][n]['value'] + "')"
 					cursor.execute(sql)
