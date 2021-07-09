@@ -20,7 +20,7 @@ db_user = ""
 db_pass = ""
 db_port = 3306
 db_name = ""
-querystring1 = {"only_confirmed":"true","only_unconfirmed":"false","only_to":"true","only_from":"false","limit":"200","order_by":"block_timestamp,desc","contract_address":usdt_contract_address, "min_timestamp": ""}
+querystring1 = {"only_confirmed":"true","only_unconfirmed":"false","only_to":"true","only_from":"false","limit":"200","order_by":"block_timestamp,desc","contract_address":usdt_contract_address, "max_timestamp": ""}
 headers1 = {"Accept": "application/json", "TRON-PRO-API-KEY": tron_pro_api_key}
 ### configs
 
