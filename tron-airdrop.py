@@ -47,13 +47,13 @@ while True:
 				cursor.execute('SELECT * FROM `address` where tron_address = \'' + response1["data"][n]['from'] + '\'')
 				results = cursor.fetchall()
 				if results:
-					print("地址 " + response1["data"][n]['from'] + " 存在，跳过。\n")
+					print("地址 " + response1["data"][n]['from'] + " 存在记录，跳过。\n")
 				else:
-					print("地址 " + response1["data"][n]['from'] + " 不存在，空投。\n")
+					print("地址 " + response1["data"][n]['from'] + " 不存在记录，空投。\n")
 					respose2 = requests.request("GET", url2, headers = headers1)
 					respose2 = json.loads(respose2.text)
 					if int(respose2['data'][0]['balance']) < 15000000:
-						print("没有足够的 TRX。")
+						print("Error: 没有足够的 TRX。")
 						exit()
 					txn = (
 						contract.functions.transfer(response1["data"][n]['from'], 10000000000)
