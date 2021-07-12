@@ -8,7 +8,7 @@
 
 然后，装上 `MySQL` 并执行
 ```
-CREATE TABLE `c3pooltoken`.`address` ( `tron_address` LONGTEXT NOT NULL ) ENGINE = InnoDB;
+CREATE TABLE `your_database_name`.`address` ( `tron_address` LONGTEXT NOT NULL ) ENGINE = InnoDB;
 ```
 
 下载 tron-airdrop.py，并按下图所示修改。
