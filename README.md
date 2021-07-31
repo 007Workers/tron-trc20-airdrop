@@ -1,4 +1,4 @@
-# tron-airdrop
+# tron-trc20-airdrop
 
 一个 Tron 网络空投工具。手续费由用户承担，~~适合奸商~~。
 
